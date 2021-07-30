@@ -1,9 +1,11 @@
 h2 {
     font-family: 'Arial';
+    color: #748194;
+    margin: 1rem;
 }
 
 #signOutBtn {
-    width: 50px;
+    width: 100px;
 }
 
 .formEntry{

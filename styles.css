@@ -26,7 +26,6 @@
 
 #signOutBtn{
     width: 130px;
-    margin: 0%, 100%, 100%, 0%;
 }
 
 .padding{
@@ -35,8 +34,6 @@
 
 table {
     font-family: 'Arial';
-    margin: 50px auto;
-    margin-left: 400px;
     border-collapse: collapse;
     border: 1px solid #eee;
     border-bottom: 2px solid #EE9BA3;

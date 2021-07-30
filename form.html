@@ -48,6 +48,7 @@
                 <th>Campaign Start</th>
                 <th>Campaign End</th>
                 <th>Amount</th>
+                <th>Expense ID</th>
             </tr>
         </thead>
         <tbody>
@@ -100,7 +101,11 @@
             'You have submitted the expense',
             'success'
             )
+            
+            var expense_id = 'MEL_' + Math.floor(Math.random() * 10000)
+            
             db.collection("expenses").add({
+            expenseID: expense_id,
             enteredBy: document.getElementById("EnteredBy").value,
             medium: document.getElementById("Medium").value,
             channelCategory: document.getElementById("ChannelCategory").value,
@@ -203,6 +208,12 @@
                 // Append a text node to the cell
                 var newText10 = document.createTextNode(doc.data().amount);
                 newCell10.appendChild(newText10);
+                
+                var newCell11 = newRow.insertCell();
+
+                // Append a text node to the cell
+                var newText11 = document.createTextNode(doc.data().expenseID);
+                newCell11.appendChild(newText11);
 
             });
         });

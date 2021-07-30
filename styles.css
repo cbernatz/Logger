@@ -11,6 +11,10 @@
     font-size: 14px;
 }
 
+.form {
+    display: inline-block;
+}
+
 .btn{
     font-weight: bold;
     width: 230px;
@@ -30,7 +34,7 @@
 
 table {
     font-family: 'Arial';
-    display: inline;
+    display: inline-block;
     border-collapse: collapse;
     border: 1px solid #eee;
     border-bottom: 1px solid #79D70F;

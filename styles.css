@@ -1,7 +1,6 @@
 .formEntry{
     font-weight: bold;
     width: 200px;
-    margin: 0 500px 20px ;
     height: 35px;
     padding: 6px 15px;
     border-radius: 5px;
@@ -15,7 +14,6 @@
 .btn{
     font-weight: bold;
     width: 230px;
-    margin: 0 500px 20px ;
     height: 45px;
     padding: 6px 15px;
     border-radius: 5px;

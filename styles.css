@@ -2,6 +2,10 @@ h2 {
     font-family: 'Arial';
 }
 
+#signOutBtn {
+    width: 50px;
+}
+
 .formEntry{
     font-weight: bold;
     width: 200px;

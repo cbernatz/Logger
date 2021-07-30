@@ -1,7 +1,6 @@
 .formEntry{
     font-weight: bold;
     width: 200px;
-    margin: 0 500px 20px ;
     height: 35px;
     padding: 6px 15px;
     border-radius: 5px;
@@ -20,7 +19,7 @@
     border-radius: 5px;
     outline: none;
     border: none;
-    background: #F6F7F9;
+    background: #79D70F;
     color: white;
     font-size: 14px;
 }

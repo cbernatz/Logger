@@ -28,7 +28,7 @@
 
 #signOutBtn{
     width: 130px;
-    margin-left: 1000px;
+    float: left;
 }
 
 .padding{

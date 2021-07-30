@@ -30,7 +30,7 @@
 
 table {
     font-family: 'Arial';
-    display: inline-block;
+    display: inline;
     border-collapse: collapse;
     border: 1px solid #eee;
     border-bottom: 1px solid #79D70F;

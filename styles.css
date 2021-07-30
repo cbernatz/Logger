@@ -2,7 +2,6 @@
     font-weight: bold;
     width: 200px;
     height: 35px;
-    padding: 1rem;
     margin: 1rem;
     border-radius: 5px;
     outline: none;
@@ -16,7 +15,6 @@
     font-weight: bold;
     width: 230px;
     height: 45px;
-    padding: 1rem;
     margin: 1rem;
     border-radius: 5px;
     outline: none;
@@ -24,10 +22,6 @@
     background: #79D70F;
     color: white;
     font-size: 14px;
-}
-
-#signOutBtn{
-    width: 130px;
 }
 
 .padding{

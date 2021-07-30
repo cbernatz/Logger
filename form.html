@@ -20,6 +20,8 @@
         <br>
         <input class="formEntry" type="text" id="ChannelCategory" placeholder="Channel Category">
         <br>
+        <input class="formEntry" type="text" id="Channel" placeholder="Channel">
+        <br>
         <input class="formEntry" type="text" id="ChannelSplit" placeholder="Channel Split">
         <br>
         <input class="formEntry" type="text" id="Partner" placeholder="Partner">
@@ -36,6 +38,7 @@
                 <th>Entered By</th>
                 <th>Medium</th>
                 <th>Channel Category</th>
+                <th>Channel</th>
                 <th>Channel Split</th>
                 <th>Partner</th>
                 <th>Campaign Type</th>
@@ -95,9 +98,10 @@
             enteredBy: document.getElementById("EnteredBy").value,
             medium: document.getElementById("Medium").value,
             channelCategory: document.getElementById("ChannelCategory").value,
+            channel: document.getElementById("Channel").value,
             channelSplit: document.getElementById("ChannelSplit").value,
             partner: document.getElementById("Partner").value,
-            campaignType: document.getElementById("CampaignType").value,
+            campaignType: document.getElementById("CampaignType").value
             })
             .then((docRef) => {
                 console.log("Document written with ID: ", docRef.id);
@@ -142,22 +146,28 @@
                 var newCell3 = newRow.insertCell();
 
                 // Append a text node to the cell
-                var newText3 = document.createTextNode(doc.data().channelSplit);
+                var newText3 = document.createTextNode(doc.data().channel);
                 newCell3.appendChild(newText3);
                 
                 // Insert a cell at the end of the row
                 var newCell4 = newRow.insertCell();
 
                 // Append a text node to the cell
-                var newText4 = document.createTextNode(doc.data().partner);
+                var newText4 = document.createTextNode(doc.data().channelSplit);
                 newCell4.appendChild(newText4);
                 
                 // Insert a cell at the end of the row
                 var newCell5 = newRow.insertCell();
 
                 // Append a text node to the cell
-                var newText5 = document.createTextNode(doc.data().campaignType);
+                var newText5 = document.createTextNode(doc.data().partner);
                 newCell5.appendChild(newText5);
+                
+                var newCell6 = newRow.insertCell();
+
+                // Append a text node to the cell
+                var newText6 = document.createTextNode(doc.data().campaignType);
+                newCell6.appendChild(newText6);
 
             });
         });

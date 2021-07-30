@@ -28,6 +28,14 @@
         <br>
         <input class="formEntry" type="text" id="CampaignType" placeholder="Campaign Type">
         <br>
+        <input class="formEntry" type="text" id="Vendor" placeholder="Vendor">
+        <br>
+        <input class="formEntry" type="date" id="CampaignStart" placeholder="Campaign Start">
+        <br>
+        <input class="formEntry" type="date" id="CampaignEnd" placeholder="Campaign End">
+        <br>
+        <input class="formEntry" type="text" id="Amount" placeholder="Amount">
+        <br>
         <input class="btn" type="submit" value="Submit"/>
 
     </form>
@@ -42,6 +50,10 @@
                 <th>Channel Split</th>
                 <th>Partner</th>
                 <th>Campaign Type</th>
+                <th>Vendor</th>
+                <th>Campaign Start</th>
+                <th>Campaign End</th>
+                <th>Amount</th>
             </tr>
         </thead>
         <tbody>
@@ -101,7 +113,12 @@
             channel: document.getElementById("Channel").value,
             channelSplit: document.getElementById("ChannelSplit").value,
             partner: document.getElementById("Partner").value,
-            campaignType: document.getElementById("CampaignType").value
+            campaignType: document.getElementById("CampaignType").value,
+            vendor: document.getElementById("Vendor").value,
+            campaignStart: document.getElementById("CampaignStart").value,
+            campaignEnd: document.getElementById("CampaignEnd").value,
+            amount: document.getElementById("Amount").value
+            
             })
             .then((docRef) => {
                 console.log("Document written with ID: ", docRef.id);
@@ -168,6 +185,30 @@
                 // Append a text node to the cell
                 var newText6 = document.createTextNode(doc.data().campaignType);
                 newCell6.appendChild(newText6);
+                
+                var newCell7 = newRow.insertCell();
+
+                // Append a text node to the cell
+                var newText7 = document.createTextNode(doc.data().vendor);
+                newCell7.appendChild(newText7);
+                
+                var newCell8 = newRow.insertCell();
+
+                // Append a text node to the cell
+                var newText8 = document.createTextNode(doc.data().campaignStart);
+                newCell8.appendChild(newText8);
+                
+                var newCell9 = newRow.insertCell();
+
+                // Append a text node to the cell
+                var newText9 = document.createTextNode(doc.data().campaignEnd);
+                newCell9.appendChild(newText9);
+                
+                var newCell10 = newRow.insertCell();
+
+                // Append a text node to the cell
+                var newText10 = document.createTextNode(doc.data().amount);
+                newCell10.appendChild(newText10);
 
             });
         });

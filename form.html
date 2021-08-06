@@ -1,298 +1,411 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="378984296211-oalrj85dhm067v4jsulkdv5pi6ibq2u2.apps.googleusercontent.com">
-    <link rel="stylesheet" href="styles.css">
-    <title>Logger</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="378984296211-oalrj85dhm067v4jsulkdv5pi6ibq2u2.apps.googleusercontent.com">
+  <link rel="stylesheet" href="styles.css">
+  <title>Logger</title>
 </head>
+
 <body>
-    <script src="https://apis.google.com/js/api.js"></script>
-    <div class="padding"></div>
-    <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
+  <script src="https://apis.google.com/js/api.js"></script>
+  <div class="padding"></div>
+  <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
+  <br>
+  <h2>Enter An Expense</h2>
+
+  <form action="#" onsubmit="foo(); return false">
+
+    <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
+
+    <select class="formEntry" name="Medium" id="Medium">
+      <option value="" disabled selected>Medium</option>
+      <option value="Online">Online</option>
+      <option value="Offline">Offline</option>
+    </select>
+
+    <select class="formEntry" name="Channel Category" id="ChannelCategory">
+      <option value="" disabled selected>Channel Category</option>
+      <option value="Brand">Brand</option>
+      <option value="Non-Marketing Vouchers">Non-Marketing Vouchers</option>
+      <option value="Organic">Organic</option>
+      <option value="Performance">Performance</option>
+      <option value="Referral">Referral</option>
+      <option value="Revenue Generation">Revenue Generation</option>
+    </select>
+
+    <select class="formEntry" name="Channel" id="Channel">
+      <option value="" disabled selected>Channel</option>
+      <option value="Affiliate">Affiliate</option>
+      <option value="App CRM">App CRM</option>
+      <option value="App Organic">App Organic</option>
+      <option value="App Paid Acquisition">App Paid Acquisition</option>
+      <option value="Barter">Barter</option>
+      <option value="Box Inserts">Box Inserts</option>
+      <option value="Call Center">Call Center</option>
+      <option value="Customer Care Sorry Vouchers">Customer Care Sorry Vouchers</option>
+      <option value="Daily Deals">Daily Deals</option>
+      <option value="Direct Mail CRM">Direct Mail CRM</option>
+      <option value="Direct Mail Performance">Direct Mail Performance</option>
+      <option value="Direct Sales">Direct Sales</option>
+      <option value="Display">Display</option>
+      <option value="Email">Email</option>
+      <option value="Email Partnerships">Email Partnerships</option>
+      <option value="Employee Discounts">Employee Discounts</option>
+      <option value="Freebies Offline">Freebies Offline</option>
+      <option value="Freebies Online">Freebies Online</option>
+      <option value="Gift boxes">Gift boxes</option>
+      <option value="Gift Card & Flyers">Gift Card & Flyers</option>
+      <option value="HelloShare Offline">HelloShare Offline</option>
+      <option value="HelloShare Online">HelloShare Online</option>
+      <option value="Influencer Brand">Influencer Brand</option>
+      <option value="Influencer Performance">Influencer Performance</option>
+      <option value="Leads Generation">Leads Generation</option>
+      <option value="Native">Native</option>
+      <option value="On-site">On-site</option>
+      <option value="Organic">Organic</option>
+      <option value="Organic Reactivation">Organic Reactivation</option>
+      <option value="Out of Home">Out of Home</option>
+      <option value="Paid Social">Paid Social</option>
+      <option value="Partnerships">Partnerships</option>
+      <option value="Podcast">Podcast</option>
+      <option value="PR">PR</option>
+      <option value="Print">Print</option>
+      <option value="QA / Warehouse / Office boxes">QA / Warehouse / Office boxes</option>
+      <option value="Radio">Radio</option>
+      <option value="SEA Brand">SEA Brand</option>
+      <option value="SEA Non-Brand">SEA Non-Brand</option>
+      <option value="SEO Brand">SEO Brand</option>
+      <option value="SEO Non-Brand">SEO Non-Brand</option>
+      <option value="SMS">SMS</option>
+    </select>
+
+    <select class="formEntry" name="Channel Split" id="ChannelSplit">
+      <option value="" disabled selected>Channel Split</option>
+      <option value="Addressable TV">Addressable TV</option>
+      <option value="Addressed">Addressed</option>
+      <option value="Agency Fee">Agency Fee</option>
+      <option value="App Product Promotion">App Product Promotion</option>
+      <option value="App Store Optimisation">App Store Optimisation</option>
+      <option value="Auto-Cancel">Auto-Cancel</option>
+      <option value="B2B Conversion">B2B Conversion</option>
+      <option value="B2B Managed Service">B2B Managed Service</option>
+      <option value="B2B2C Partnerships">B2B2C Partnerships</option>
+      <option value="Brand Boosting">Brand Boosting</option>
+      <option value="Call Center">Call Center</option>
+      <option value="Callcenter">Callcenter</option>
+      <option value="Cart abandonment">Cart abandonment</option>
+      <option value="Community engagement">Community engagement</option>
+      <option value="Content">Content</option>
+      <option value="Customer Care Sorry Vouchers">Customer Care Sorry Vouchers</option>
+      <option value="Customer Events">Customer Events</option>
+      <option value="D2D">D2D</option>
+      <option value="Daily Deals">Daily Deals</option>
+      <option value="Darkposting">Darkposting</option>
+      <option value="Direct Affiliate">Direct Affiliate</option>
+      <option value="Door-to-Door">Door-to-Door</option>
+      <option value="DV360">DV360</option>
+      <option value="Email Partnerships">Email Partnerships</option>
+      <option value="Employee Discounts">Employee Discounts</option>
+      <option value="Event">Event</option>
+      <option value="Events">Events</option>
+      <option value="Facebook">Facebook</option>
+      <option value="Fixed Cost">Fixed Cost</option>
+      <option value="GDN">GDN</option>
+      <option value="Gift">Gift</option>
+      <option value="Gift boxes">Gift boxes</option>
+      <option value="Gift Card">Gift Card</option>
+      <option value="GSP">GSP</option>
+      <option value="Handouts">Handouts</option>
+      <option value="High Profile">High Profile</option>
+      <option value="Inbound">Inbound</option>
+      <option value="Influencer Amplification">Influencer Amplification</option>
+      <option value="Insert">Insert</option>
+      <option value="Kiosk">Kiosk</option>
+      <option value="Lead Cycle">Lead Cycle</option>
+      <option value="Magazine Ads / Editorial Magazine">Magazine Ads / Editorial Magazine</option>
+      <option value="Mainline">Mainline</option>
+      <option value="Marketing">Marketing</option>
+      <option value="Measurement Cost">Measurement Cost</option>
+      <option value="Native Facebook">Native Facebook</option>
+      <option value="Native Non-Facebook">Native Non-Facebook</option>
+      <option value="Network Affiliate">Network Affiliate</option>
+      <option value="Networks">Networks</option>
+      <option value="Newsletter">Newsletter</option>
+      <option value="Non-Facebook">Non-Facebook</option>
+      <option value="On-site">On-site</option>
+      <option value="Organic">Organic</option>
+      <option value="Organic Reactivation">Organic Reactivation</option>
+      <option value="Other Display">Other Display</option>
+      <option value="Outbound">Outbound</option>
+      <option value="Outdoor">Outdoor</option>
+      <option value="Outdoor Production">Outdoor Production</option>
+      <option value="Over The Top">Over The Top</option>
+      <option value="Over The Top (OTT)">Over The Top (OTT)</option>
+      <option value="Paid Social">Paid Social</option>
+      <option value="Parcel Inserts">Parcel Inserts</option>
+      <option value="Partnerships">Partnerships</option>
+      <option value="Podcast Ads">Podcast Ads</option>
+      <option value="Podcast Production">Podcast Production</option>
+      <option value="Podcast Sponsorship">Podcast Sponsorship</option>
+      <option value="PR Boxes">PR Boxes</option>
+      <option value="PR Events">PR Events</option>
+      <option value="PR Influencers">PR Influencers</option>
+      <option value="Print">Print</option>
+      <option value="Print Production">Print Production</option>
+      <option value="Production Cost">Production Cost</option>
+      <option value="Programmatic">Programmatic</option>
+      <option value="QA / Warehouse / Office boxes">QA / Warehouse / Office boxes</option>
+      <option value="Radio Ads">Radio Ads</option>
+      <option value="Radio Production">Radio Production</option>
+      <option value="Radio Sponsorship">Radio Sponsorship</option>
+      <option value="Research Cost">Research Cost</option>
+      <option value="Retail Gift Card">Retail Gift Card</option>
+      <option value="Retail Gift Cards">Retail Gift Cards</option>
+      <option value="SEA Brand">SEA Brand</option>
+      <option value="SEA Competitor">SEA Competitor</option>
+      <option value="SEA Fresh">SEA Fresh</option>
+      <option value="SEA Non Brand">SEA Non Brand</option>
+      <option value="SEA Non-Brand">SEA Non-Brand</option>
+      <option value="SEA Reactivation">SEA Reactivation</option>
+      <option value="SEA Shopping">SEA Shopping</option>
+      <option value="SEO Brand">SEO Brand</option>
+      <option value="SEO Non-Brand">SEO Non-Brand</option>
+      <option value="Shared Mailer (3rd party)">Shared Mailer (3rd party)</option>
+      <option value="Shared Mailer (in-house)">Shared Mailer (in-house)</option>
+      <option value="Talent Fees">Talent Fees</option>
+      <option value="Transactional">Transactional</option>
+      <option value="TV Advertising">TV Advertising</option>
+      <option value="TV Agency">TV Agency</option>
+      <option value="TV Buyouts">TV Buyouts</option>
+      <option value="TV Production">TV Production</option>
+      <option value="TV Sponsorship">TV Sponsorship</option>
+      <option value="TV Upload/Clearing">TV Upload/Clearing</option>
+      <option value="Unaddressed">Unaddressed</option>
+      <option value="Universal App Campaigns">Universal App Campaigns</option>
+      <option value="Video">Video</option>
+      <option value="Video Brand">Video Brand</option>
+      <option value="Video On Demand (VOD)">Video On Demand (VOD)</option>
+      <option value="Vlogging">Vlogging</option>
+      <option value="Youtube">Youtube</option>
+    </select>
+
+    <input class="formEntry" type="text" id="ChannelSplit" placeholder="Channel Split">
+    <input class="formEntry" type="text" id="Partner" placeholder="Partner">
+    <input class="formEntry" type="text" id="CampaignType" placeholder="Campaign Type">
+    <input class="formEntry" type="text" id="Vendor" placeholder="Vendor">
+    <input class="formEntry" type="date" id="CampaignStart" placeholder="Campaign Start">
+    <input class="formEntry" type="date" id="CampaignEnd" placeholder="Campaign End">
+    <input class="formEntry" type="text" id="Amount" placeholder="Amount">
     <br>
-    <h2>Enter An Expense</h2>
-    
-    <form action="#" onsubmit="foo(); return false">
-        
-        <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
-        
-        <select class="formEntry" name="Medium" id="Medium">
-          <option value="" disabled selected>Medium</option>
-          <option value="Online">Online</option>
-          <option value="Offline">Offline</option>
-        </select>
-        
-        <select class="formEntry" name="Channel Category" id="ChannelCategory">
-          <option value="" disabled selected>Channel Category</option>
-          <option value="Brand">Brand</option>
-          <option value="Non-Marketing Vouchers">Non-Marketing Vouchers</option>
-          <option value="Organic">Organic</option>
-          <option value="Performance">Performance</option>
-          <option value="Referral">Referral</option>
-          <option value="Revenue Generation">Revenue Generation</option>
-        </select>
-        
-        <select class="formEntry" name="Channel" id="Channel">
-            <option value="" disabled selected>Medium</option>
-            <option value="Affiliate">Affiliate</option>
-            <option value="App CRM">App CRM</option>
-            <option value="App Organic">App Organic</option>
-            <option value="App Paid Acquisition">App Paid Acquisition</option>
-            <option value="Barter">Barter</option>
-            <option value="Box Inserts">Box Inserts</option>
-            <option value="Call Center">Call Center</option>
-            <option value="Customer Care Sorry Vouchers">Customer Care Sorry Vouchers</option>
-            <option value="Daily Deals">Daily Deals</option>
-            <option value="Direct Mail CRM">Direct Mail CRM</option>
-            <option value="Direct Mail Performance">Direct Mail Performance</option>
-            <option value="Direct Sales">Direct Sales</option>
-            <option value="Display">Display</option>
-            <option value="Email">Email</option>
-            <option value="Email Partnerships">Email Partnerships</option>
-            <option value="Employee Discounts">Employee Discounts</option>
-            <option value="Freebies Offline">Freebies Offline</option>
-            <option value="Freebies Online">Freebies Online</option>
-            <option value="Gift boxes">Gift boxes</option>
-            <option value="Gift Card & Flyers">Gift Card & Flyers</option>
-            <option value="HelloShare Offline">HelloShare Offline</option>
-            <option value="HelloShare Online">HelloShare Online</option>
-            <option value="Influencer Brand">Influencer Brand</option>
-            <option value="Influencer Performance">Influencer Performance</option>
-            <option value="Leads Generation">Leads Generation</option>
-            <option value="Native">Native</option>
-            <option value="On-site">On-site</option>
-            <option value="Organic">Organic</option>
-            <option value="Organic Reactivation">Organic Reactivation</option>
-            <option value="Out of Home">Out of Home</option>
-            <option value="Paid Social">Paid Social</option>
-            <option value="Partnerships">Partnerships</option>
-            <option value="Podcast">Podcast</option>
-            <option value="PR">PR</option>
-            <option value="Print">Print</option>
-            <option value="QA / Warehouse / Office boxes">QA / Warehouse / Office boxes</option>
-            <option value="Radio">Radio</option>
-            <option value="SEA Brand">SEA Brand</option>
-            <option value="SEA Non-Brand">SEA Non-Brand</option>
-            <option value="SEO Brand">SEO Brand</option>
-            <option value="SEO Non-Brand">SEO Non-Brand</option>
-            <option value="SMS">SMS</option>
-        </select>
+    <input class="btn" type="submit" value="Submit" />
 
-        <input class="formEntry" type="text" id="ChannelSplit" placeholder="Channel Split">
-        <input class="formEntry" type="text" id="Partner" placeholder="Partner">
-        <input class="formEntry" type="text" id="CampaignType" placeholder="Campaign Type">
-        <input class="formEntry" type="text" id="Vendor" placeholder="Vendor">
-        <input class="formEntry" type="date" id="CampaignStart" placeholder="Campaign Start">
-        <input class="formEntry" type="date" id="CampaignEnd" placeholder="Campaign End">
-        <input class="formEntry" type="text" id="Amount" placeholder="Amount">
-        <br>
-        <input class="btn" type="submit" value="Submit"/>
+  </form>
+  <br>
+  <h2>My Campaigns</h2>
 
-    </form>
-    <br>
-    <h2>My Campaigns</h2>
+  <table id="myTable">
+    <thead>
+      <tr>
+        <th>Entered By</th>
+        <th>Medium</th>
+        <th>Channel Category</th>
+        <th>Channel</th>
+        <th>Channel Split</th>
+        <th>Partner</th>
+        <th>Campaign Type</th>
+        <th>Vendor</th>
+        <th>Campaign Start</th>
+        <th>Campaign End</th>
+        <th>Amount</th>
+        <th>Expense ID</th>
+      </tr>
+    </thead>
+    <tbody>
+    </tbody>
+  </table>
 
-    <table id="myTable">
-        <thead>
-            <tr>
-                <th>Entered By</th>
-                <th>Medium</th>
-                <th>Channel Category</th>
-                <th>Channel</th>
-                <th>Channel Split</th>
-                <th>Partner</th>
-                <th>Campaign Type</th>
-                <th>Vendor</th>
-                <th>Campaign Start</th>
-                <th>Campaign End</th>
-                <th>Amount</th>
-                <th>Expense ID</th>
-            </tr>
-        </thead>
-        <tbody>
-        </tbody>
-    </table>
+  <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
+  <!-- The core Firebase JS SDK is always required and must be listed first -->
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
 
-    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-firestore.js"></script>
-    <!-- The core Firebase JS SDK is always required and must be listed first -->
-    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-app.js"></script>
-
-    <!-- TODO: Add SDKs for Firebase products that you want to use
+  <!-- TODO: Add SDKs for Firebase products that you want to use
         https://firebase.google.com/docs/web/setup#available-libraries -->
-    <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
-    <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/8.7.0/firebase-analytics.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/7.15.5/firebase-firestore.js"></script>
 
-    <script>
+  <script>
     // Your web app's Firebase configuration
     // For Firebase JS SDK v7.20.0 and later, measurementId is optional
     var firebaseConfig = {
-        apiKey: "AIzaSyD2Yz0n4P5MrXGvHXpYiCDsMmEZpc813MM",
-        authDomain: "logger-b2a2b.firebaseapp.com",
-        projectId: "logger-b2a2b",
-        storageBucket: "logger-b2a2b.appspot.com",
-        messagingSenderId: "378984296211",
-        appId: "1:378984296211:web:4f6b82de59d8e5e6fb74e6",
-        measurementId: "G-3N4QL6GNSF"
-     };
+      apiKey: "AIzaSyD2Yz0n4P5MrXGvHXpYiCDsMmEZpc813MM",
+      authDomain: "logger-b2a2b.firebaseapp.com",
+      projectId: "logger-b2a2b",
+      storageBucket: "logger-b2a2b.appspot.com",
+      messagingSenderId: "378984296211",
+      appId: "1:378984296211:web:4f6b82de59d8e5e6fb74e6",
+      measurementId: "G-3N4QL6GNSF"
+    };
     // // Initialize Firebase
     // firebase.initializeApp(firebaseConfig);
     // firebase.analytics();
-    </script>
-    <script>
-        // const firebase = require("firebase");
-        // // Required for side-effects
-        // require("firebase/firestore");
-        // // Initialize Cloud Firestore through Firebase
-        firebase.initializeApp({
-            apiKey: "AIzaSyD2Yz0n4P5MrXGvHXpYiCDsMmEZpc813MM",
-            authDomain: "logger-b2a2b.firebaseapp.com",
-            projectId: "logger-b2a2b",
+  </script>
+  <script>
+    // const firebase = require("firebase");
+    // // Required for side-effects
+    // require("firebase/firestore");
+    // // Initialize Cloud Firestore through Firebase
+    firebase.initializeApp({
+      apiKey: "AIzaSyD2Yz0n4P5MrXGvHXpYiCDsMmEZpc813MM",
+      authDomain: "logger-b2a2b.firebaseapp.com",
+      projectId: "logger-b2a2b",
+    });
+
+    var db = firebase.firestore();
+
+    function foo() {
+      Swal.fire(
+        'Good job!',
+        'You have submitted the expense',
+        'success'
+      )
+
+      var expense_id = 'MEL_' + Math.floor(Math.random() * 10000)
+
+      db.collection("expenses").add({
+          expenseID: expense_id,
+          enteredBy: document.getElementById("EnteredBy").value,
+          medium: document.getElementById("Medium").value,
+          channelCategory: document.getElementById("ChannelCategory").value,
+          channel: document.getElementById("Channel").value,
+          channelSplit: document.getElementById("ChannelSplit").value,
+          partner: document.getElementById("Partner").value,
+          campaignType: document.getElementById("CampaignType").value,
+          vendor: document.getElementById("Vendor").value,
+          campaignStart: document.getElementById("CampaignStart").value,
+          campaignEnd: document.getElementById("CampaignEnd").value,
+          amount: document.getElementById("Amount").value
+
+        })
+        .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+          console.error("Error adding document: ", error);
         });
+    }
 
-        var db = firebase.firestore();
-        
-        function foo() {
-            Swal.fire(
-            'Good job!',
-            'You have submitted the expense',
-            'success'
-            )
-            
-            var expense_id = 'MEL_' + Math.floor(Math.random() * 10000)
-            
-            db.collection("expenses").add({
-            expenseID: expense_id,
-            enteredBy: document.getElementById("EnteredBy").value,
-            medium: document.getElementById("Medium").value,
-            channelCategory: document.getElementById("ChannelCategory").value,
-            channel: document.getElementById("Channel").value,
-            channelSplit: document.getElementById("ChannelSplit").value,
-            partner: document.getElementById("Partner").value,
-            campaignType: document.getElementById("CampaignType").value,
-            vendor: document.getElementById("Vendor").value,
-            campaignStart: document.getElementById("CampaignStart").value,
-            campaignEnd: document.getElementById("CampaignEnd").value,
-            amount: document.getElementById("Amount").value
-            
-            })
-            .then((docRef) => {
-                console.log("Document written with ID: ", docRef.id);
-            })
-            .catch((error) => {
-                console.error("Error adding document: ", error);
-            });
-        }
+    console.log("HERE")
+    db.collection("expenses").get().then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        // doc.data() is never undefined for query doc snapshots
+        console.log(doc.id, " => ", doc.data());
+        var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
 
-        console.log("HERE")
-        db.collection("expenses").get().then((querySnapshot) => {
-            querySnapshot.forEach((doc) => {
-                // doc.data() is never undefined for query doc snapshots
-                console.log(doc.id, " => ", doc.data());
-                var tbodyRef = document.getElementById('myTable').getElementsByTagName('tbody')[0];
+        // Insert a row at the end of table
+        var newRow = tbodyRef.insertRow();
 
-                // Insert a row at the end of table
-                var newRow = tbodyRef.insertRow();
+        // Insert a cell at the end of the row
+        var newCell = newRow.insertCell();
 
-                // Insert a cell at the end of the row
-                var newCell = newRow.insertCell();
+        // Append a text node to the cell
+        var newText = document.createTextNode(doc.data().enteredBy);
+        newCell.appendChild(newText);
 
-                // Append a text node to the cell
-                var newText = document.createTextNode(doc.data().enteredBy);
-                newCell.appendChild(newText);
+        // Insert a cell at the end of the row
+        var newCell1 = newRow.insertCell();
 
-                // Insert a cell at the end of the row
-                var newCell1 = newRow.insertCell();
+        // Append a text node to the cell
+        var newText1 = document.createTextNode(doc.data().medium);
+        newCell1.appendChild(newText1);
 
-                // Append a text node to the cell
-                var newText1 = document.createTextNode(doc.data().medium);
-                newCell1.appendChild(newText1);
+        // Insert a cell at the end of the row
+        var newCell2 = newRow.insertCell();
 
-                // Insert a cell at the end of the row
-                var newCell2 = newRow.insertCell();
+        // Append a text node to the cell
+        var newText2 = document.createTextNode(doc.data().channelCategory);
+        newCell2.appendChild(newText2);
 
-                // Append a text node to the cell
-                var newText2 = document.createTextNode(doc.data().channelCategory);
-                newCell2.appendChild(newText2);
-                
-                // Insert a cell at the end of the row
-                var newCell3 = newRow.insertCell();
+        // Insert a cell at the end of the row
+        var newCell3 = newRow.insertCell();
 
-                // Append a text node to the cell
-                var newText3 = document.createTextNode(doc.data().channel);
-                newCell3.appendChild(newText3);
-                
-                // Insert a cell at the end of the row
-                var newCell4 = newRow.insertCell();
+        // Append a text node to the cell
+        var newText3 = document.createTextNode(doc.data().channel);
+        newCell3.appendChild(newText3);
 
-                // Append a text node to the cell
-                var newText4 = document.createTextNode(doc.data().channelSplit);
-                newCell4.appendChild(newText4);
-                
-                // Insert a cell at the end of the row
-                var newCell5 = newRow.insertCell();
+        // Insert a cell at the end of the row
+        var newCell4 = newRow.insertCell();
 
-                // Append a text node to the cell
-                var newText5 = document.createTextNode(doc.data().partner);
-                newCell5.appendChild(newText5);
-                
-                var newCell6 = newRow.insertCell();
+        // Append a text node to the cell
+        var newText4 = document.createTextNode(doc.data().channelSplit);
+        newCell4.appendChild(newText4);
 
-                // Append a text node to the cell
-                var newText6 = document.createTextNode(doc.data().campaignType);
-                newCell6.appendChild(newText6);
-                
-                var newCell7 = newRow.insertCell();
+        // Insert a cell at the end of the row
+        var newCell5 = newRow.insertCell();
 
-                // Append a text node to the cell
-                var newText7 = document.createTextNode(doc.data().vendor);
-                newCell7.appendChild(newText7);
-                
-                var newCell8 = newRow.insertCell();
+        // Append a text node to the cell
+        var newText5 = document.createTextNode(doc.data().partner);
+        newCell5.appendChild(newText5);
 
-                // Append a text node to the cell
-                var newText8 = document.createTextNode(doc.data().campaignStart);
-                newCell8.appendChild(newText8);
-                
-                var newCell9 = newRow.insertCell();
+        var newCell6 = newRow.insertCell();
 
-                // Append a text node to the cell
-                var newText9 = document.createTextNode(doc.data().campaignEnd);
-                newCell9.appendChild(newText9);
-                
-                var newCell10 = newRow.insertCell();
+        // Append a text node to the cell
+        var newText6 = document.createTextNode(doc.data().campaignType);
+        newCell6.appendChild(newText6);
 
-                // Append a text node to the cell
-                var newText10 = document.createTextNode(doc.data().amount);
-                newCell10.appendChild(newText10);
-                
-                var newCell11 = newRow.insertCell();
+        var newCell7 = newRow.insertCell();
 
-                // Append a text node to the cell
-                var newText11 = document.createTextNode(doc.data().expenseID);
-                newCell11.appendChild(newText11);
+        // Append a text node to the cell
+        var newText7 = document.createTextNode(doc.data().vendor);
+        newCell7.appendChild(newText7);
 
-            });
-        });
+        var newCell8 = newRow.insertCell();
 
-        function signOut() {
-            var auth2 = gapi.auth2.getAuthInstance();
-            auth2.signOut().then(function () {
-            console.log('User signed out.');
-            window.location = "index.html"
-        })};
+        // Append a text node to the cell
+        var newText8 = document.createTextNode(doc.data().campaignStart);
+        newCell8.appendChild(newText8);
 
-        function onLoad() {
-            gapi.load('auth2', function() {
-                gapi.auth2.init();
-            });
-            }
+        var newCell9 = newRow.insertCell();
 
-    </script>
-    <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
+        // Append a text node to the cell
+        var newText9 = document.createTextNode(doc.data().campaignEnd);
+        newCell9.appendChild(newText9);
+
+        var newCell10 = newRow.insertCell();
+
+        // Append a text node to the cell
+        var newText10 = document.createTextNode(doc.data().amount);
+        newCell10.appendChild(newText10);
+
+        var newCell11 = newRow.insertCell();
+
+        // Append a text node to the cell
+        var newText11 = document.createTextNode(doc.data().expenseID);
+        newCell11.appendChild(newText11);
+
+      });
+    });
+
+    function signOut() {
+      var auth2 = gapi.auth2.getAuthInstance();
+      auth2.signOut().then(function() {
+        console.log('User signed out.');
+        window.location = "index.html"
+      })
+    };
+
+    function onLoad() {
+      gapi.load('auth2', function() {
+        gapi.auth2.init();
+      });
+    }
+  </script>
+  <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 </body>
+
 </html>

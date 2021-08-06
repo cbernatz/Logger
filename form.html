@@ -16,8 +16,15 @@
     <h2>Enter An Expense</h2>
     
     <form action="#" onsubmit="foo(); return false">
+        
         <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
+        
         <input class="formEntry" type="text" id="Medium" placeholder="Medium">
+        <select name="Medium" id="Medium">
+          <option value="Online">Online</option>
+          <option value="Offline">Offline</option>
+        </select>
+        
         <input class="formEntry" type="text" id="ChannelCategory" placeholder="Channel Category">
         <input class="formEntry" type="text" id="Channel" placeholder="Channel">
         <input class="formEntry" type="text" id="ChannelSplit" placeholder="Channel Split">

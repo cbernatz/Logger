@@ -21,6 +21,15 @@
 
     <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
 
+    <select class="formEntry" name="Country" id="Country">
+      <option value="" disabled selected>Country</option>
+      <option value="US">US</option>
+      <option value="ER">ER</option>
+      <option value="GC">GC</option>
+      <option value="F75">F75</option>
+      <option value="MR">MR</option>
+    </select>
+    
     <select class="formEntry" name="Medium" id="Medium">
       <option value="" disabled selected>Medium</option>
       <option value="Online">Online</option>
@@ -219,6 +228,7 @@
     <thead>
       <tr>
         <th>Entered By</th>
+        <th>Country</th>
         <th>Medium</th>
         <th>Channel Category</th>
         <th>Channel</th>
@@ -278,16 +288,17 @@
 
     function foo() {
       Swal.fire(
-        'Good job!',
+        'Nice!',
         'You have submitted the expense',
         'success'
       )
 
-      var expense_id = 'MEL_' + Math.floor(Math.random() * 10000)
+      var expense_id = 'MEL_' + Math.floor(Math.random() * 1000000)
 
       db.collection("expenses").add({
           expenseID: expense_id,
           enteredBy: document.getElementById("EnteredBy").value,
+          country: document.getElementById("Country").value,
           medium: document.getElementById("Medium").value,
           channelCategory: document.getElementById("ChannelCategory").value,
           channel: document.getElementById("Channel").value,
@@ -324,6 +335,13 @@
         // Append a text node to the cell
         var newText = document.createTextNode(doc.data().enteredBy);
         newCell.appendChild(newText);
+        
+        // Insert a cell at the end of the row
+        var newCellCountry = newRow.insertCell();
+
+        // Append a text node to the cell
+        var newTextCountry = document.createTextNode(doc.data().country);
+        newCellCountry.appendChild(newTextCountry);
 
         // Insert a cell at the end of the row
         var newCell1 = newRow.insertCell();

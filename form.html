@@ -193,9 +193,17 @@
       <option value="Youtube">Youtube</option>
     </select>
 
-    <input class="formEntry" type="text" id="ChannelSplit" placeholder="Channel Split">
     <input class="formEntry" type="text" id="Partner" placeholder="Partner">
-    <input class="formEntry" type="text" id="CampaignType" placeholder="Campaign Type">
+    
+    <select class="formEntry" name="Campaign Type" id="CampaignType">
+      <option value="" disabled selected>Campaign Type</option>
+      <option value="Online">Acquisition</option>
+      <option value="Offline">Reactivation</option>
+      <option value="Offline">Lifecycle</option>
+      <option value="Offline">Upselling</option>
+      <option value="Offline">Retention</option>
+    </select>
+    
     <input class="formEntry" type="text" id="Vendor" placeholder="Vendor">
     <input class="formEntry" type="date" id="CampaignStart" placeholder="Campaign Start">
     <input class="formEntry" type="date" id="CampaignEnd" placeholder="Campaign End">

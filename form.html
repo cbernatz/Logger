@@ -291,40 +291,23 @@
     var db = firebase.firestore();
 
     function foo() {
-      if(document.getElementById("EnteredBy") != "") {
-        bar();
-      } else {
-          Swal.fire(
-            'Nice!',
+            Swal.fire(
+            'Good job!',
             'You have submitted the expense',
             'success'
-          )
-
-          var expense_id = 'MEL_' + Math.floor(Math.random() * 1000000)
-
-          db.collection("expenses").add({
-              expenseID: expense_id,
-              enteredBy: document.getElementById("EnteredBy").value,
-              country: document.getElementById("Country").value,
-              medium: document.getElementById("Medium").value,
-              channelCategory: document.getElementById("ChannelCategory").value,
-              channel: document.getElementById("Channel").value,
-              channelSplit: document.getElementById("ChannelSplit").value,
-              partner: document.getElementById("Partner").value,
-              campaignType: document.getElementById("CampaignType").value,
-              vendor: document.getElementById("Vendor").value,
-              campaignStart: document.getElementById("CampaignStart").value,
-              campaignEnd: document.getElementById("CampaignEnd").value,
-              amount: document.getElementById("Amount").value
-
+            )
+            db.collection("expenses").add({
+            enteredBy: document.getElementById("EnteredBy").value,
+            medium: document.getElementById("Medium").value,
+            channelCategory: document.getElementById("ChannelCategory").value
             })
             .then((docRef) => {
-              console.log("Document written with ID: ", docRef.id);
+                console.log("Document written with ID: ", docRef.id);
             })
             .catch((error) => {
-              console.error("Error adding document: ", error);
+                console.error("Error adding document: ", error);
             });
-    }
+        }
     
     function bar() {
       alert("Hey! This function works!");

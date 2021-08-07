@@ -291,7 +291,7 @@
     var db = firebase.firestore();
 
     function foo() {
-      if(document.getElementById("EnteredBy").value == "") {
+      if(document.getElementById("EnteredBy") != "") {
         bar();
       } else {
           Swal.fire(

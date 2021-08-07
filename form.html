@@ -319,6 +319,16 @@
           console.error("Error adding document: ", error);
         });
     }
+    
+    function bar() {
+      var modal = document.createElement("MODAL");
+      modal.style.display = "block";
+      window.onclick = function(event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      }
+    }
 
     console.log("HERE")
     db.collection("expenses").get().then((querySnapshot) => {
@@ -337,6 +347,7 @@
         var newBtn = document.createElement("BUTTON");
         newBtn.setAttribute("id", "editbtn");
         newBtn.textContent = 'Edit';
+        newBtn.setAttribute("onclick","bar();");
         newCellBtn.appendChild(newBtn);
 
         // Insert a cell at the end of the row

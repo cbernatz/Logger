@@ -227,6 +227,7 @@
   <table id="myTable">
     <thead>
       <tr>
+        <th>Edit</th>
         <th>Entered By</th>
         <th>Country</th>
         <th>Medium</th>
@@ -328,6 +329,13 @@
 
         // Insert a row at the end of table
         var newRow = tbodyRef.insertRow();
+        
+        // Insert a cell at the end of the row
+        var newCellBtn = newRow.insertCell();
+
+        // Append a text node to the cell
+        var newBtn = document.createElement("BUTTON");
+        newCellBtn.appendChild(newBtn);
 
         // Insert a cell at the end of the row
         var newCell = newRow.insertCell();

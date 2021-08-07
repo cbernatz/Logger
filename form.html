@@ -411,7 +411,7 @@
         var newCell11 = newRow.insertCell();
 
         // Append a text node to the cell
-        var newText11 = document.createTextNode(doc.data().expenseID);
+        var newText11 = document.createTextNode(doc.data().expenseID).addEventListener("click", function() {alert("Hello World!");});
         newCell11.appendChild(newText11);
 
       });

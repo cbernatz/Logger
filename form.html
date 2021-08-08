@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h2>test 4</h2>
+  <h2>test 5</h2>
   <script src="https://apis.google.com/js/api.js"></script>
   <div class="padding"></div>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
@@ -342,6 +342,7 @@
               doc.ref.delete()
             })
           })
+        /*
 
         db.collection("expenses").add({
             expenseID: document.getElementById("ExpenseID").value,
@@ -365,6 +366,7 @@
           .catch((error) => {
             console.error("Error adding document: ", error);
           });
+          */
     }
 
     console.log("HERE")

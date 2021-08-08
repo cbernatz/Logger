@@ -334,6 +334,14 @@
           'You have updated an expense',
           'success'
         )
+      
+        db.collection("expenses").where("expenseID", "==", document.getElementById("EnteredBy"))
+          .get()
+          .then((querySnapshot) => {
+            querySnapshot.forEach(doc=>{
+              doc.ref.delete()
+            })
+          })
 
         db.collection("expenses").add({
             expenseID: document.getElementById("ExpenseID").value,

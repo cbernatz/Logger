@@ -14,28 +14,20 @@
 
   <script src="https://apis.google.com/js/api.js"></script>
 
-  <h2>test 31</h2>
+  <h2>test 24</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
 
   <br>
 
   <h2>Enter An Expense</h2>
-  
-  <script>
-    function allowEdit() {
-      alert("onclick is working!");
-      var input = document.createElement("input");
-      input.type = "text";
-      input.className = "css-class-name"; // set the CSS class
-      container.appendChild(input); // put it into the DOM
-    }
-  </script>
-  
-  <input type="checkbox" id="editCheck" name="editCheck" onclick="allowEdit();">
+
+  <input type="checkbox" id="editCheck" name="editCheck">
   <label for="editCheck">Edit a Campaign</label>
 
   <div class="form-popup" id="subForm">
     <form action="#" onsubmit="foo(); return false">
+
+      <input class="formEntry" type="text" id="ExpenseID" placeholder="Expense ID">
 
       <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
 
@@ -381,7 +373,6 @@
         /*
         // Insert a cell at the end of the row
         var newCellBtn = newRow.insertCell();
-
         // Append a text node to the cell
         var newBtn = document.createElement("BUTTON");
         newBtn.setAttribute("id", "editbtn");

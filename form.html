@@ -14,7 +14,7 @@
 
   <script src="https://apis.google.com/js/api.js"></script>
 
-  <h2>test 30</h2>
+  <h2>test 31</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
 
   <br>
@@ -27,11 +27,11 @@
   <div class="form-popup" id="subForm">
     <form name="expenseForm" action="#" onsubmit="foo(); return false">
 
-      <input class="formEntry" type="text" id="ExpenseID" name="Expense ID">
+      <input class="formEntry" type="text" name="Expense ID" type="text" id="ExpenseID">
 
-      <input class="formEntry" type="text" id="EnteredBy" name="Entered By">
+      <input class="formEntry" type="text" name="Entered By" type="text" id="EnteredBy">
 
-      <select class="formEntry" name="Country" id="Country">
+      <select class="formEntry" type="text" name="Country" id="Country">
         <option value="" disabled selected>Country</option>
         <option value="US">US</option>
         <option value="ER">ER</option>
@@ -40,13 +40,13 @@
         <option value="MR">MR</option>
       </select>
 
-      <select class="formEntry" name="Medium" id="Medium">
+      <select class="formEntry" type="text" name="Medium" id="Medium">
         <option value="" disabled selected>Medium</option>
         <option value="Online">Online</option>
         <option value="Offline">Offline</option>
       </select>
 
-      <select class="formEntry" name="Channel Category" id="ChannelCategory">
+      <select class="formEntry" type="text" name="Channel Category" id="ChannelCategory">
         <option value="" disabled selected>Channel Category</option>
         <option value="Brand">Brand</option>
         <option value="Non-Marketing Vouchers">Non-Marketing Vouchers</option>
@@ -56,7 +56,7 @@
         <option value="Revenue Generation">Revenue Generation</option>
       </select>
 
-      <select class="formEntry" name="Channel" id="Channel">
+      <select class="formEntry" type="text" name="Channel" id="Channel">
         <option value="" disabled selected>Channel</option>
         <option value="Affiliate">Affiliate</option>
         <option value="App CRM">App CRM</option>
@@ -102,7 +102,7 @@
         <option value="SMS">SMS</option>
       </select>
 
-      <select class="formEntry" name="Channel Split" id="ChannelSplit">
+      <select class="formEntry" type="text" name="Channel Split" id="ChannelSplit">
         <option value="" disabled selected>Channel Split</option>
         <option value="Addressable TV">Addressable TV</option>
         <option value="Addressed">Addressed</option>
@@ -212,9 +212,9 @@
         <option value="Youtube">Youtube</option>
       </select>
 
-      <input class="formEntry" type="text" id="Partner" name="Partner">
+      <input class="formEntry" type="text" name="Partner" id="Partner">
 
-      <select class="formEntry" name="Campaign Type" id="CampaignType">
+      <select class="formEntry" type="text" name="Campaign Type" id="CampaignType">
         <option value="" disabled selected>Campaign Type</option>
         <option value="Acquisition">Acquisition</option>
         <option value="Reactivation">Reactivation</option>
@@ -223,10 +223,10 @@
         <option value="Retention">Retention</option>
       </select>
 
-      <input class="formEntry" type="text" id="Vendor" name="Vendor">
-      <input class="formEntry" type="date" id="CampaignStart" name="Campaign Start">
-      <input class="formEntry" type="date" id="CampaignEnd" name="Campaign End">
-      <input class="formEntry" type="text" id="Amount" name="Amount">
+      <input class="formEntry" type="text" name="Vendor" id="Vendor">
+      <input class="formEntry" type="date" name="Campaign Start" id="CampaignStart">
+      <input class="formEntry" type="date" name="Campaign End" id="CampaignEnd">
+      <input class="formEntry" type="text" name="Amount" id="Amount">
       <br>
       <input class="btn" type="submit" value="Submit" />
 

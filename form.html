@@ -14,7 +14,7 @@
   
   <script src="https://apis.google.com/js/api.js"></script>
   
-  <h2>test 20</h2>
+  <h2>test 21</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
   
   <br>
@@ -302,7 +302,28 @@
       if(document.getElementById("editCheck").checked) {
         bar();
       } else {
-        Swal.fire(
+        footwo();
+      }
+    }
+    
+    function bar() {
+      Swal.fire(
+          'Nice!',
+          'You have updated an expense',
+          'success'
+      )
+      
+      db.collection("expenses").where("expenseID", "==", document.getElementById("ExpenseID").value)
+        .get()
+        .then((querySnapshot) => {
+          querySnapshot.forEach(doc=>{
+            doc.ref.delete()
+          })
+      })
+    }
+    
+    function footwo() {
+      Swal.fire(
           'Nice!',
           'You have submitted the expense',
           'success'
@@ -332,46 +353,6 @@
           .catch((error) => {
             console.error("Error adding document: ", error);
           });
-      }
-    }
-    
-    function bar() {
-      Swal.fire(
-          'Nice!',
-          'You have updated an expense',
-          'success'
-      )
-      
-      db.collection("expenses").where("expenseID", "==", document.getElementById("ExpenseID").value)
-        .get()
-        .then((querySnapshot) => {
-          querySnapshot.forEach(doc=>{
-            doc.ref.delete()
-          })
-      })
-
-      db.collection("expenses").add({
-        expenseID: document.getElementById("ExpenseID").value,
-        enteredBy: document.getElementById("EnteredBy").value,
-        country: document.getElementById("Country").value,
-        medium: document.getElementById("Medium").value,
-        channelCategory: document.getElementById("ChannelCategory").value,
-        channel: document.getElementById("Channel").value,
-        channelSplit: document.getElementById("ChannelSplit").value,
-        partner: document.getElementById("Partner").value,
-        campaignType: document.getElementById("CampaignType").value,
-        vendor: document.getElementById("Vendor").value,
-        campaignStart: document.getElementById("CampaignStart").value,
-        campaignEnd: document.getElementById("CampaignEnd").value,
-        amount: document.getElementById("Amount").value
-
-      })
-      .then((docRef) => {
-        console.log("Document written with ID: ", docRef.id);
-      })
-      .catch((error) => {
-        console.error("Error adding document: ", error);
-      });
     }
 
     console.log("HERE")

@@ -14,7 +14,7 @@
 
   <script src="https://apis.google.com/js/api.js"></script>
 
-  <h2>test 24</h2>
+  <h2>test 30</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
 
   <br>
@@ -25,11 +25,11 @@
   <label for="editCheck">Edit a Campaign</label>
 
   <div class="form-popup" id="subForm">
-    <form action="#" onsubmit="foo(); return false">
+    <form name="expenseForm" action="#" onsubmit="foo(); return false">
 
-      <input class="formEntry" type="text" id="ExpenseID" placeholder="Expense ID">
+      <input class="formEntry" type="text" id="ExpenseID" name="Expense ID">
 
-      <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
+      <input class="formEntry" type="text" id="EnteredBy" name="Entered By">
 
       <select class="formEntry" name="Country" id="Country">
         <option value="" disabled selected>Country</option>
@@ -212,7 +212,7 @@
         <option value="Youtube">Youtube</option>
       </select>
 
-      <input class="formEntry" type="text" id="Partner" placeholder="Partner">
+      <input class="formEntry" type="text" id="Partner" name="Partner">
 
       <select class="formEntry" name="Campaign Type" id="CampaignType">
         <option value="" disabled selected>Campaign Type</option>
@@ -223,10 +223,10 @@
         <option value="Retention">Retention</option>
       </select>
 
-      <input class="formEntry" type="text" id="Vendor" placeholder="Vendor">
-      <input class="formEntry" type="date" id="CampaignStart" placeholder="Campaign Start">
-      <input class="formEntry" type="date" id="CampaignEnd" placeholder="Campaign End">
-      <input class="formEntry" type="text" id="Amount" placeholder="Amount">
+      <input class="formEntry" type="text" id="Vendor" name="Vendor">
+      <input class="formEntry" type="date" id="CampaignStart" name="Campaign Start">
+      <input class="formEntry" type="date" id="CampaignEnd" name="Campaign End">
+      <input class="formEntry" type="text" id="Amount" name="Amount">
       <br>
       <input class="btn" type="submit" value="Submit" />
 
@@ -326,6 +326,9 @@
     }
 
     function footwo() {
+      
+      validateForm();
+      
       Swal.fire(
         'Nice!',
         'You have submitted the expense',
@@ -356,6 +359,16 @@
         .catch((error) => {
           console.error("Error adding document: ", error);
         });
+    }
+  </script>
+  
+  <script>
+    function validateForm() {
+      let x = document.forms["expenseForm"]["Entered by"].value;
+      if (x == "") {
+        alert("Name must be filled out");
+        return false;
+      }
     }
   </script>
 

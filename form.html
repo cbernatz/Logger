@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h2>test 5</h2>
+  <h2>test 6</h2>
   <script src="https://apis.google.com/js/api.js"></script>
   <div class="padding"></div>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
@@ -335,7 +335,7 @@
           'success'
         )
       
-        db.collection("expenses").where("expenseID", "==", document.getElementById("EnteredBy"))
+        db.collection("expenses").where("expenseID", "==", document.getElementById("ExpenseID"))
           .get()
           .then((querySnapshot) => {
             querySnapshot.forEach(doc=>{

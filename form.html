@@ -23,15 +23,13 @@
   
   <script>
     function allowEdit() {
-      if (document.getElementById("editCheck").checked) {
-        var input = document.createElement("input");
-        input.type = "text";
-        input.className = "formEntry"; // set the CSS class
-        input.id = "ExpenseID";
-        input.placeholder = "Expense ID";
-        container.appendChild(input); // put it into the DOM
-        document.getElementById("input").style.display='';
-      }
+      var input = document.createElement("input");
+      input.type = "text";
+      input.className = "formEntry"; // set the CSS class
+      input.id = "ExpenseID";
+      input.placeholder = "Expense ID";
+      container.appendChild(input); // put it into the DOM
+      document.getElementById("input").style.display='';
     }
   </script>
   

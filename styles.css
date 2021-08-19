@@ -4,6 +4,12 @@ h2 {
     margin: 1rem;
 }
 
+#editCheck {
+    font-family: 'Arial';
+    color: #748194;
+    margin: .5rem;
+}
+
 #signOutBtn {
     width: 100px;
 }

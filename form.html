@@ -14,7 +14,7 @@
   
   <script src="https://apis.google.com/js/api.js"></script>
   
-  <h2>test 21</h2>
+  <h2>test 22</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
   
   <br>
@@ -319,7 +319,9 @@
           querySnapshot.forEach(doc=>{
             doc.ref.delete()
           })
-      })
+      });
+      
+      footwo();
     }
     
     function footwo() {

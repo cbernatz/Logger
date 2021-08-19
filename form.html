@@ -11,7 +11,7 @@
 </head>
 
 <body>
-  <h2>test 8</h2>
+  <h2>test 9</h2>
   <script src="https://apis.google.com/js/api.js"></script>
   <div class="padding"></div>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
@@ -292,7 +292,7 @@
     var db = firebase.firestore();
 
     function foo() {
-      if(document.getElementById("ExpenseID") === "") {
+      if(document.getElementById("ExpenseID") != "MEL_965217") {
         Swal.fire(
           'Nice!',
           'You have submitted the expense',

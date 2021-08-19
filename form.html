@@ -14,7 +14,7 @@
 
   <script src="https://apis.google.com/js/api.js"></script>
 
-  <h2>test 24</h2>
+  <h2>test 26</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
 
   <br>
@@ -23,11 +23,22 @@
 
   <input type="checkbox" id="editCheck" name="editCheck">
   <label for="editCheck">Edit a Campaign</label>
+  
+  <script>
+    function allowEdit () {
+      if (document.getElementById("editCheck").checked) {
+        var input = document.createElement("input");
+        input.type = "text";
+        input.className = "formEntry"; // set the CSS class
+        input.id = "ExpenseID"
+        input.placeholder = "Expense ID"
+        container.appendChild(input); // put it into the DOM  
+      }
+    }
+  </script>
 
   <div class="form-popup" id="subForm">
     <form action="#" onsubmit="foo(); return false">
-
-      <input class="formEntry" type="text" id="ExpenseID" placeholder="Expense ID">
 
       <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
 

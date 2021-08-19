@@ -11,22 +11,22 @@
 </head>
 
 <body>
-  
+
   <script src="https://apis.google.com/js/api.js"></script>
-  
+
   <h2>test 24</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
-  
+
   <br>
-  
+
   <h2>Enter An Expense</h2>
-  
+
   <input type="checkbox" id="editCheck" name="editCheck">
   <label for="editCheck">Edit a Campaign</label>
-  
+
   <div class="form-popup" id="subForm">
     <form action="#" onsubmit="foo(); return false">
-      
+
       <input class="formEntry" type="text" id="ExpenseID" placeholder="Expense ID">
 
       <input class="formEntry" type="text" id="EnteredBy" placeholder="Entered by">
@@ -296,71 +296,70 @@
     });
 
     var db = firebase.firestore();
-   </script>
-  
-   <script>
+  </script>
+
+  <script>
     function foo() {
-      if(document.getElementById("editCheck").checked) {
+      if (document.getElementById("editCheck").checked) {
         bar();
       } else {
         footwo();
       }
     }
-    
+
     function bar() {
       Swal.fire(
-          'Nice!',
-          'You have updated an expense',
-          'success'
+        'Nice!',
+        'You have updated an expense',
+        'success'
       )
-      
+
       db.collection("expenses").where("expenseID", "==", document.getElementById("ExpenseID").value)
         .get()
         .then((querySnapshot) => {
-          querySnapshot.forEach(doc=>{
+          querySnapshot.forEach(doc => {
             doc.ref.delete()
           })
-      });
-      
+        });
+
       footwo();
     }
-    
+
     function footwo() {
       Swal.fire(
-          'Nice!',
-          'You have submitted the expense',
-          'success'
-        )
+        'Nice!',
+        'You have submitted the expense',
+        'success'
+      )
 
-        var expense_id = 'MEL_' + Math.floor(Math.random() * 1000000)
+      var expense_id = 'MEL_' + Math.floor(Math.random() * 1000000)
 
-        db.collection("expenses").add({
-            expenseID: expense_id,
-            enteredBy: document.getElementById("EnteredBy").value,
-            country: document.getElementById("Country").value,
-            medium: document.getElementById("Medium").value,
-            channelCategory: document.getElementById("ChannelCategory").value,
-            channel: document.getElementById("Channel").value,
-            channelSplit: document.getElementById("ChannelSplit").value,
-            partner: document.getElementById("Partner").value,
-            campaignType: document.getElementById("CampaignType").value,
-            vendor: document.getElementById("Vendor").value,
-            campaignStart: document.getElementById("CampaignStart").value,
-            campaignEnd: document.getElementById("CampaignEnd").value,
-            amount: document.getElementById("Amount").value
+      db.collection("expenses").add({
+          expenseID: expense_id,
+          enteredBy: document.getElementById("EnteredBy").value,
+          country: document.getElementById("Country").value,
+          medium: document.getElementById("Medium").value,
+          channelCategory: document.getElementById("ChannelCategory").value,
+          channel: document.getElementById("Channel").value,
+          channelSplit: document.getElementById("ChannelSplit").value,
+          partner: document.getElementById("Partner").value,
+          campaignType: document.getElementById("CampaignType").value,
+          vendor: document.getElementById("Vendor").value,
+          campaignStart: document.getElementById("CampaignStart").value,
+          campaignEnd: document.getElementById("CampaignEnd").value,
+          amount: document.getElementById("Amount").value
 
-          })
-          .then((docRef) => {
-            console.log("Document written with ID: ", docRef.id);
-          })
-          .catch((error) => {
-            console.error("Error adding document: ", error);
-          });
+        })
+        .then((docRef) => {
+          console.log("Document written with ID: ", docRef.id);
+        })
+        .catch((error) => {
+          console.error("Error adding document: ", error);
+        });
     }
-   </script>
-  
-   <script>
+  </script>
 
+  <script>
     console.log("HERE")
     db.collection("expenses").get().then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
@@ -370,7 +369,7 @@
 
         // Insert a row at the end of table
         var newRow = tbodyRef.insertRow();
-        
+
         /*
         // Insert a cell at the end of the row
         var newCellBtn = newRow.insertCell();
@@ -388,14 +387,14 @@
         // Append a text node to the cell
         var newText = document.createTextNode(doc.data().enteredBy);
         newCell.appendChild(newText);
-        
+
         // Insert a cell at the end of the row
         var newCellCountry = newRow.insertCell();
 
         // Append a text node to the cell
         var newTextCountry = document.createTextNode(doc.data().country);
         newCellCountry.appendChild(newTextCountry);
-        
+
         // Insert a cell at the end of the row
         var newCell1 = newRow.insertCell();
 
@@ -469,9 +468,9 @@
 
       });
     });
-   </script>
-  
-   <script>
+  </script>
+
+  <script>
     function signOut() {
       var auth2 = gapi.auth2.getAuthInstance();
       auth2.signOut().then(function() {
@@ -486,8 +485,8 @@
       });
     }
   </script>
-  
-  
+
+
   <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 </body>
 

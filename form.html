@@ -14,18 +14,15 @@
 
   <script src="https://apis.google.com/js/api.js"></script>
 
-  <h2>test 26</h2>
+  <h2>test 27</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
 
   <br>
 
   <h2>Enter An Expense</h2>
-
-  <input type="checkbox" id="editCheck" name="editCheck">
-  <label for="editCheck">Edit a Campaign</label>
   
   <script>
-    function allowEdit () {
+    function allowEdit() {
       if (document.getElementById("editCheck").checked) {
         var input = document.createElement("input");
         input.type = "text";
@@ -36,6 +33,9 @@
       }
     }
   </script>
+  
+  <input type="checkbox" id="editCheck" name="editCheck" onclick="allowEdit();">
+  <label for="editCheck">Edit a Campaign</label>
 
   <div class="form-popup" id="subForm">
     <form action="#" onsubmit="foo(); return false">

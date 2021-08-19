@@ -14,7 +14,7 @@
   
   <script src="https://apis.google.com/js/api.js"></script>
   
-  <h2>test 15</h2>
+  <h2>test 16</h2>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
   
   <br>
@@ -342,7 +342,7 @@
           'success'
       )
       
-      db.collection("expenses").where("enteredBy", "==", "Chris Bernatz")
+      db.collection("expenses").where("expenseID", "==", "MEL_585666")
         .get()
         .then((querySnapshot) => {
           querySnapshot.forEach(doc=>{

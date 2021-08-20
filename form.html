@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="378984296211-oalrj85dhm067v4jsulkdv5pi6ibq2u2.apps.googleusercontent.com">
+  <meta name="google-signin-client_id" content="378984296211-oalrj85dhm067v4jsulkdv5pi6ibq2u2.apps.googleusercontent.com">
   <link rel="stylesheet" href="styles.css">
   <title>Logger</title>
 </head>
@@ -13,7 +13,7 @@
 <body>
 
   <script src="https://apis.google.com/js/api.js"></script>
-
+  <div class="padding"></div>
   <button class="btn" id="signOutBtn" onclick="signOut();">Sign out</button>
 
   <br>
@@ -480,11 +480,9 @@
         gapi.load('auth2', function() {
             gapi.auth2.init();
         });
-    }
+        }
   </script>
-
 
   <script src="https://apis.google.com/js/platform.js?onload=onLoad" async defer></script>
 </body>
-
 </html>
